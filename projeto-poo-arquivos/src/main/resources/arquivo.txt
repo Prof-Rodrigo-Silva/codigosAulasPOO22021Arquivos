@@ -1,0 +1,3 @@
+João;luan@gmail.com;999554411;celular
+João;luan@gmail.com;32415859;residencial
+João;luan@gmail.com;999885522;celular
