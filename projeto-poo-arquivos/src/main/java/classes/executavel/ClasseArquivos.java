@@ -40,12 +40,12 @@ public class ClasseArquivos {
 		//initEditarArquivoPOI();
 		//initEditarArquivoPOI2();
 		//initGravarJSON();
-		initLerJSON();
+		//initLerJSON();
 		
 	}
 	
 	public static void initGravaArquivo() throws IOException {
-		File arquivo = new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo.txt");
+		File arquivo = new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo.txt");
 		
 		//File arquivo = new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo.csv");
 
@@ -73,7 +73,7 @@ public class ClasseArquivos {
 	
 	public static void initLerArquivo() throws FileNotFoundException {
 		FileInputStream entrada = new FileInputStream(
-				new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo.txt"));
+				new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo.txt"));
 		
 		
 		//FileInputStream entrada = new FileInputStream(
@@ -114,7 +114,7 @@ public class ClasseArquivos {
 	}
 	
 	public static void initGravaArquivoPOI() throws Throwable {
-		File arquivo = new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
+		File arquivo = new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
 
 		if(!arquivo.exists()) {
 			arquivo.createNewFile();
@@ -156,7 +156,7 @@ public class ClasseArquivos {
 	public static void initLerArquivoPOI() throws Exception{
 		
 		FileInputStream entrada = new FileInputStream(
-				new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls"));
+				new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls"));
 		
 		
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(entrada);//Prepara a entrada do arquivo excel para ler
@@ -198,7 +198,7 @@ public class ClasseArquivos {
 
 	public static void initEditarArquivoPOI() throws Exception {
 		
-		File arquivo = new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
+		File arquivo = new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
 		
 		FileInputStream entrada = new FileInputStream(arquivo);
 		
@@ -227,7 +227,7 @@ public class ClasseArquivos {
 	
 	public static void initEditarArquivoPOI2() throws Exception {
 		
-		File arquivo = new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
+		File arquivo = new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
 		
 		FileInputStream entrada = new FileInputStream(arquivo);
 		
@@ -275,7 +275,7 @@ public class ClasseArquivos {
 		
 		System.out.println(jsonUser);
 		
-		FileWriter fileWriter = new FileWriter("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo_json.json");
+		FileWriter fileWriter = new FileWriter("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_json.json");
 		
 		//Se ocorrer erro de encond
 		//OutputStreamWriter gravar = new OutputStreamWriter(new FileOutputStream(arquivo), "UTF-8");
@@ -287,7 +287,7 @@ public class ClasseArquivos {
 	
 	public static void initLerJSON() throws IOException {
 		//----------------LER ARQUIVO-----------------
-		FileReader fileReader = new FileReader("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo_json.json");
+		FileReader fileReader = new FileReader("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_json.json");
 				
 		JsonArray jsonArray = (JsonArray) JsonParser.parseReader(fileReader);
 				
