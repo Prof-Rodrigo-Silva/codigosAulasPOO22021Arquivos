@@ -46,15 +46,11 @@ public class ClasseArquivos {
 	
 	public static void initGravaArquivo() throws IOException {
 		File arquivo = new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo.txt");
-		
 		//File arquivo = new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo.csv");
-
 		if(!arquivo.exists()) {
 			arquivo.createNewFile();
 		}
-		
 		FileWriter escrever_arquivo = new FileWriter(arquivo);
-		
 		//escrever_arquivo.write("TEXTO");
 		try {
 			ClasseDAO classeDao = new ClasseDAO();
@@ -68,19 +64,15 @@ public class ClasseArquivos {
 		}	
 		escrever_arquivo.flush();//Persistir
 		escrever_arquivo.close();//Fechar
-	
 	}
 	
 	public static void initLerArquivo() throws FileNotFoundException {
 		FileInputStream entrada = new FileInputStream(
 				new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo.txt"));
 		
-		
 		//FileInputStream entrada = new FileInputStream(
 		//		new File("/home/rodrigo/eclipse-workspace/projeto-poo-arquivos/src/main/resources/arquivo.csv"));
-		
 		Scanner lerArquivo = new Scanner(entrada,"UTF-8");
-		
 		//Ler arquivo
 		/*while (lerArquivo.hasNext()) {
 			String linha = lerArquivo.nextLine();
@@ -89,10 +81,8 @@ public class ClasseArquivos {
 				System.out.println(linha);
 			}	
 		}*/
-		
 		//Ler arquivo e add em uma lista de objetos
 		List<BeanAlunoFone> list = new ArrayList<BeanAlunoFone>();
-		
 		while (lerArquivo.hasNext()) {
 			String linha = lerArquivo.nextLine();
 			
@@ -115,7 +105,6 @@ public class ClasseArquivos {
 	
 	public static void initGravaArquivoPOI() throws Throwable {
 		File arquivo = new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls");
-
 		if(!arquivo.exists()) {
 			arquivo.createNewFile();
 		}
@@ -150,14 +139,11 @@ public class ClasseArquivos {
 		hssfWorkbook.write(registro);
 		registro.flush();
 		registro.close();
-	
 	}
 		
 	public static void initLerArquivoPOI() throws Exception{
-		
 		FileInputStream entrada = new FileInputStream(
 				new File("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_planilha.xls"));
-		
 		
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(entrada);//Prepara a entrada do arquivo excel para ler
 		HSSFSheet planilha = hssfWorkbook.getSheetAt(0);//Pega a 1º planilha
@@ -261,7 +247,7 @@ public class ClasseArquivos {
 		p.setSenha("minhaSenha");
 		
 		Pessoa p2 = new Pessoa();
-		p2.setNome("Graziela");
+		p2.setNome("Nai");
 		p2.setCpf("88888888888");
 		p2.setLogin("meuLogin");
 		p2.setSenha("admin");
@@ -275,7 +261,8 @@ public class ClasseArquivos {
 		
 		System.out.println(jsonUser);
 		
-		FileWriter fileWriter = new FileWriter("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_json.json");
+		FileWriter fileWriter = new FileWriter("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/"
+				+ "arquivo_json.json");
 		
 		//Se ocorrer erro de encond
 		//OutputStreamWriter gravar = new OutputStreamWriter(new FileOutputStream(arquivo), "UTF-8");
@@ -287,7 +274,8 @@ public class ClasseArquivos {
 	
 	public static void initLerJSON() throws IOException {
 		//----------------LER ARQUIVO-----------------
-		FileReader fileReader = new FileReader("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/arquivo_json.json");
+		FileReader fileReader = new FileReader("/home/rodrigo/git/repository14/projeto-poo-arquivos/src/main/resources/"
+				+ "arquivo_json.json");
 				
 		JsonArray jsonArray = (JsonArray) JsonParser.parseReader(fileReader);
 				
@@ -302,3 +290,6 @@ public class ClasseArquivos {
 		System.out.println(listPessoas);
 	}
 }
+
+
+
